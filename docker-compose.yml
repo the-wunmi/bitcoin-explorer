@@ -1,0 +1,13 @@
+version: '3'
+services:
+  node:
+    build:
+      context: .
+      args:
+        port: 8080
+    ports:
+     - "8080:8080"
+    extra_hosts:
+     - "host.docker.internal:host-gateway"
+    # volumes:
+    #  - /Users/a/.bitcoin:/root/.bitcoin
